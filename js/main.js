@@ -24,7 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchedUser = USER.filter((user) =>
       user.name.toLowerCase().includes(value),
     );
-    render(searchedUser);
+    if (searchedUser.length === 0) {
+      list.innerHTML = `<span class="text-3xl text-white">По вашему запросу ничего не найдено</span>`;
+    } else {
+      render(searchedUser);
+    }
   });
   function render(array = []) {
     const html = array.map(template).join('');
