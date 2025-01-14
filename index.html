@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js-search</title>
+    <link rel="stylesheet" href="styles/output.css" />
+  </head>
+  <body>
+    <div
+      class="flex h-screen w-screen items-center justify-center bg-[#232428]"
+    >
+      <div
+        class="mx-auto flex h-[90vh] w-1/2 flex-col gap-4 p-5 lg:w-9/12 xs:w-full"
+      >
+        <h1 class="text-6xl font-semibold">Search</h1>
+        <input
+          autocomplete="off"
+          type="text"
+          class="h-14 w-full rounded-lg border-4 border-transparent p-5 text-2xl text-black focus:outline-none"
+          id="search-input"
+        />
+        <div
+          class="mx-2 flex h-[65vh] flex-col items-center justify-center gap-5 overflow-hidden rounded-md text-black"
+        >
+          <ul
+            class="flex h-full w-full flex-col items-start gap-2 overflow-y-auto"
+            id="list"
+          ></ul>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
